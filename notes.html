@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maqar - Notes</title>
+  <link rel="stylesheet" href="notes.css">
+</head>
+<body>
+  <header>
+        <h1>MAQAR</h1>
+        <NAv>
+            <ul>
+                <LI><a href="dashboard.html">MAIN</a></LI>
+                <LI><a href="notes.html">NOTES</a></LI>
+                <LI><a href="todo-list.html">TODO-LIST</a></LI>
+                <LI><a href="links.html">LINKS</a></LI>
+            </ul>
+        </NAv>
+        <!-- time goes here -->
+    </header><br><br><br><br><br><br>
+
+  <main>
+    <!-- VIEW 1: all groups -->
+    <section id="groups-view" class="view active">
+      <h2>Note Groups</h2>
+      <div id="groups-container"></div>
+      <button id="new-group-btn">+ New Group</button>
+
+      <div id="new-group-form" style="display:none;">
+        <input type="text" id="new-group-input" placeholder="Group name">
+        <button id="confirm-new-group-btn">Add</button>
+      </div>
+    </section>
+
+    <!-- VIEW 2: cards inside one group -->
+    <section id="cards-view" class="vie">
+      <span class="back-btn" id="back-to-groups">&larr; Back</span>
+      <button id="new-card-btn">+ New Card</button>
+      <h2 id="group-title-display">title</h2>
+      <div id="cards-container"></div>
+    </section>
+
+    <!-- VIEW 3: one open note -->
+    <section id="note-view" class="vie">
+      <span class="back-btn" id="back-to-cards">&larr; Back</span>
+        <DIV id="note-container">
+            <input type="text" id="note-title-input" placeholder="Title">
+            <textarea id="note-content-input" rows="10" placeholder="Write your note..."></textarea>
+            <button id="save-note-btn">Save</button>
+        </DIV>
+    </section>
+  </main>
+  <script src="notes.js"></script>
+</body>
+</html>

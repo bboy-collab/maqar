@@ -20,6 +20,9 @@ nav a{
 nav a:hover{
     color: grey;
 }
+nav a.active{
+    border-bottom: 2px solid white;
+}
 nav{
     position: absolute;
     top: 20px;
@@ -41,6 +44,11 @@ nav{
     flex-direction: column;
     align-items: flex-start;
     border: 1px solid #9e4fb7;
+    transition:all 0.5s;
+}
+#cards #card1:hover{
+    border: 1px solid #9e4fb7;
+    box-shadow: 0px 0px 20px #9e4fb7;
 }
 #cards #card2{
     width: 200px;
@@ -51,6 +59,11 @@ nav{
     flex-direction: column;
     align-items: flex-start;
     border: 1px solid #45b841;
+    transition:all 0.5s;
+}
+#cards #card2:hover{
+    border: 1px solid #45b841;
+    box-shadow: 0px 0px 20px #45b841;
 }
 #cards #card3{
     width: 200px;
@@ -61,7 +74,14 @@ nav{
     flex-direction: column;
     align-items: flex-start;
     border: 1px solid #4663ba;
+    transition:all 0.5s;
 }
+#cards #card3:hover{
+    border: 1px solid #4663ba;
+    box-shadow: 0px 0px 20px #4663ba;
+    
+}
+
 #card1Header{
     color: rgb(137, 149, 183);
     display: flex;
