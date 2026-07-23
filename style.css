@@ -126,3 +126,8 @@ footer{
     background-color: #1f1f1f;
     
 }
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
