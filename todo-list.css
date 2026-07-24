@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+
+body{
+    background-color: #171717;
+    font-family: "Playfair Display", serif;
+    
+}
+
+header h1{
+    color:aliceblue
+}
+
+nav ul{
+    list-style: none;
+    gap: 20px;
+    display: flex;
+}
+nav a{
+    text-decoration: none;
+    color: aliceblue;
+}
+nav a:hover{
+    color: grey;
+}
+nav a.active{
+    border-bottom: 2px solid white;
+}
+nav{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#listSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#listContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ded7e0;
+}
+#listContainer:hover{
+    box-shadow: 0px 0px 12px #716868;
+}
+#listname{
+    font-size: 16px;
+    width: auto;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1f1f1f;
+    color: aliceblue;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+}
+
+#addListButton{
+    background-color: #1f1f1f;
+    color: aliceblue;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 15px;
+    cursor: pointer;
+    font-family: "Playfair Display", serif;
+}
+
+#taskInput{
+    width: 200px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ded7e0;
+    background-color: #141414;
+    color: aliceblue;
+    text-align: center;
+}
+
+#addTaskButton{
+    background-color: #1f1f1f;
+    color: aliceblue;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    padding: 4px 4px;
+    cursor: pointer;
+    font-family: "Playfair Display", serif;
+}
+#addTaskButton:hover{
+    box-shadow: 0px 0px 12px #716868;
+}

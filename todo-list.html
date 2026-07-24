@@ -8,6 +8,7 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
 </head>
 <body>
     <main>
@@ -22,9 +23,19 @@
                 </ul>
             </NAv>
             <!-- time goes here -->
-        </header><br><br><br><br><br><br>
-        <section>
-            
+        </header><br>
+        <button id="addListButton">Add list</button><br><br>
+        <section id="listSection">
+            <div id="listContainer">
+                <input type="text" id="listname" placeholder="Enter list name"><br>
+                <form id="taskForm">
+                    <input type="text" id="taskInput" placeholder="Enter a task">
+                    <button id="addTaskButton"><i class="fa-solid fa-plus"></i></button>
+                </form>
+                <div id="taskContainer">
+                    <ul id="taskList"></ul>
+                </div>
+            </div>
         </section>
         <br><br><br><br><br><br><br>
     </main>
