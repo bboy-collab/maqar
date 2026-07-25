@@ -27,7 +27,19 @@
         <button id="addListButton">Add list</button><br><br>
         <section id="listSection">
             <div id="listContainer">
-                <input type="text" id="listname" placeholder="Enter list name"><br>
+                <input type="text" id="listname" placeholder="Project Name"><br>
+                <div class="stat-container">
+                    <div class="details">
+                        <h3>Progress</h3>
+                        <div id="progressBar">
+                            <div id="progress"></div>
+                        </div>
+                    </div>
+
+                    <div class="stat-number">
+                        <p id="numbers">0 / 0</p>
+                    </div>
+                </div>
                 <form id="taskForm">
                     <input type="text" id="taskInput" placeholder="Enter a task">
                     <button id="addTaskButton"><i class="fa-solid fa-plus"></i></button>
@@ -39,6 +51,6 @@
         </section>
         <br><br><br><br><br><br><br>
     </main>
-     <script src="index.js"></script>
+     <script src="todo-list.js"></script>
 </body> 
 </html>
