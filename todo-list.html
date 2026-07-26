@@ -24,10 +24,20 @@
             </NAv>
             <!-- time goes here -->
         </header><br>
-        <button id="addListButton">Add list</button><br><br>
+        <div id="addContainer">
+            <button id="addListButton">Add list</button>
+            <input type="text" id="projectName">
+        </div>
         <section id="listSection">
-            <div id="listContainer">
-                <input type="text" id="listname" placeholder="Project Name"><br>
+            <div id="listContainer" class="listContainer list-template">
+                <div class="list-header">
+                    <h2 class="project-title">Project Name</h2>
+
+                    <button class="delete-list-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <br>
                 <div class="stat-container">
                     <div class="details">
                         <h3>Progress</h3>
@@ -51,6 +61,9 @@
         </section>
         <br><br><br><br><br><br><br>
     </main>
-     <script src="todo-list.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="todo-list.js"></script>
+      
 </body> 
 </html>

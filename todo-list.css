@@ -70,12 +70,19 @@ nav{
     width: 50%;
     height: 100%;
     background: #ffffff;
+    transition: 0.2s;
 }
 #numbers{
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
-#listContainer{
+.listContainer{
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -87,9 +94,13 @@ nav{
     border-radius: 10px;
     border: 1px solid #ded7e0;
 }
-#listContainer:hover{
+
+.listContainer:hover{
     box-shadow: 0px 0px 12px #716868;
 }
+
+
+
 #listname{
     font-size: 16px;
     width: auto;
@@ -100,6 +111,12 @@ nav{
     color: aliceblue;
     text-align: center;
     font-family: "Playfair Display", serif;
+}
+
+.listContainer h2{
+    color: aliceblue;
+    text-align: center;
+    width: 100%;
 }
 
 #addListButton{
@@ -211,8 +228,53 @@ nav{
 }
 
 .task-buttons .edit-btn:hover{
+    color: #ff7912;
+    border-color: #ff7912;
     box-shadow: 0px 0px 12px #ff7912;
+    transform: scale(1.1);
 }
 .task-buttons .delete-btn:hover{
+    color: #ff4d4d;
+    border-color: #ff4d4d;
     box-shadow: 0px 0px 12px #d02525;
+    transform: scale(1.1);
+}
+
+.list-template {
+    display: none;
+}
+
+.listContainer{
+    position: relative;
+}
+.list-header{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.delete-list-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    background-color: #1f1f1f;
+    color: aliceblue;
+    border: 1px solid #ded7e0;
+    border-radius: 8px;
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+.delete-list-btn:hover{
+    color: #ff4d4d;
+    border-color: #ff4d4d;
+    box-shadow: 0px 0px 12px #d02525;
+    transform: scale(1.1);
 }
