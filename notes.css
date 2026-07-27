@@ -22,10 +22,22 @@ nav a:hover{
 nav a.active{
     border-bottom: 2px solid white;
 }
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
 nav{
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: static;
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 h2{
     color: aliceblue;

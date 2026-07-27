@@ -17,8 +17,22 @@ nav a{
     text-decoration: none;
     color: aliceblue;
 }
-nav a:hover{
-    color: grey;
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+nav{
+    position: static;
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 nav a.active{
     border-bottom: 2px solid white;

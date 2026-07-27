@@ -30,18 +30,40 @@ nav a:hover{
 nav a.active{
     border-bottom: 2px solid white;
 }
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
 nav{
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: static;
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#addContainer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin:20px;
 }
 
 #listSection{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
     gap: 20px;
+    padding: 20px;
 }
 
 .stat-container{
@@ -83,7 +105,7 @@ nav{
 }
 
 .listContainer{
-    width: 300px;
+    width: min(320px,100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,7 +153,7 @@ nav{
 }
 
 #taskInput{
-    width: 200px;
+    flex:1;
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ded7e0;
@@ -288,4 +310,45 @@ nav{
     background-color: #141414;
     color: aliceblue;
     text-align: center;
+}
+
+#taskForm{
+    display:flex;
+    width:100%;
+    gap:10px;
+}
+
+@media (max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+
+    nav ul{
+        justify-content:center;
+    }
+
+    .stat-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    #numbers{
+        width:60px;
+        height:60px;
+        font-size:1.2rem;
+    }
+
+    #projectName{
+        width:100%;
+        max-width:300px;
+    }
+
+    #addListButton{
+        width:100%;
+        max-width:300px;
+    }
+
 }
