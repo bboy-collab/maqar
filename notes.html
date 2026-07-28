@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MAQAR - Notes</title>
-  <link rel="stylesheet" href="notes.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAQAR - Notes</title>
+    <link rel="stylesheet" href="notes.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -17,39 +21,44 @@
             </ul>
         </NAv>
         <!-- time goes here -->
-    </header><br><br><br><br><br><br>
+  </header>
 
-  <main>
-    <!-- VIEW 1: all groups -->
-    <section id="groups-view" class="view active">
-      <h2>Note Groups</h2>
-      <div id="groups-container"></div>
-      <button id="new-group-btn">+ New Group</button>
+  <div class="headOfNotes">
+    <h1>Notes</h1>
+    <div>
+      <button class="add-note-btn" onclick="openNoteDialog()">+ Add Note</button>
+    </div>
+  </div>
 
-      <div id="new-group-form" style="display:none;">
-        <input type="text" id="new-group-input" placeholder="Group name">
-        <button id="confirm-new-group-btn">Add</button>
-      </div>
-    </section>
-
-    <!-- VIEW 2: cards inside one group -->
-    <section id="cards-view" class="vie">
-      <span class="back-btn" id="back-to-groups">&larr; Back</span>
-      <button id="new-card-btn">+ New Card</button>
-      <h2 id="group-title-display">title</h2>
-      <div id="cards-container"></div>
-    </section>
-
-    <!-- VIEW 3: one open note -->
-    <section id="note-view" class="vie">
-      <span class="back-btn" id="back-to-cards">&larr; Back</span>
-        <DIV id="note-container">
-            <input type="text" id="note-title-input" placeholder="Title">
-            <textarea id="note-content-input" rows="10" placeholder="Write your note..."></textarea>
-            <button id="save-note-btn">Save</button>
-        </DIV>
-    </section>
+  <main id="notesContainer" class="notes-grid">
+    
   </main>
+
+  <dialog id="noteDialog">
+    <div class="dialog-content">
+      <div class="dialog-header">
+        <h2 class="dialog-title" id="dialogTitle">Add New Note</h2>
+        <button class="close-btn" onclick="closeNoteDialog()">x</button>
+      </div>
+    </div>
+
+    <form id="noteForm">
+      <div class="form-group">
+        <label for="noteTitle" class="form-label">Title</label>
+        <input type="text" id="noteTitle" class="form-input" placeholder="Enter note title...">
+      </div>
+
+      <div class="form-group">
+        <label for="noteContent" class="form-label">Content</label>
+        <textarea id="noteContent" class="form-textarea" placeholder="Write your note here..."required></textarea>
+      </div>
+
+      <div class="dialo-actions">
+        <button type="button" class="cancle-btn" onclick="closeNoteDialog()">Cancle</button>
+        <button type="submit" class="save-btn">Save Note</button>
+      </div>
+    </form>
+  </dialog>
   <script src="notes.js"></script>
 </body>
 </html>

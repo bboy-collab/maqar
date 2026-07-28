@@ -1,9 +1,14 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
  body{
     background-color: #171717;
     font-family: "Playfair Display", serif;
     
 }
-
 header h1{
     color:aliceblue
 }
@@ -16,6 +21,12 @@ nav ul{
 nav a{
     text-decoration: none;
     color: aliceblue;
+}
+nav a:hover{
+    color: grey;
+}
+nav a.active{
+    border-bottom: 2px solid white;
 }
 header{
     display: flex;
@@ -33,14 +44,6 @@ nav ul{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-}
-nav a.active{
-    border-bottom: 2px solid white;
-}
-nav{
-    position: absolute;
-    top: 20px;
-    right: 20px;
 }
 #cards{
     display: flex;
