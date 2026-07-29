@@ -103,6 +103,7 @@ input, textarea{
     color: #ff6b6b;
 }
 
+
 #noteDialog{
     background-color: #1f1f1f;
     border: 1px solid #e3e3e3;
@@ -111,7 +112,6 @@ input, textarea{
     margin: auto;
     text-autospace: calc(1.1);
     color: aliceblue;
-    cursor: pointer;
     transition: all 0.3s;
     width: 250PX;
     display: flex;
@@ -139,7 +139,9 @@ input, textarea{
     width: 30px;
     height: 30px;
 }
-
+.cancle-btn:hover,.save-btn:hover{
+    box-shadow: 0px 0px 12px #fdfdfd;
+}
 .close-btn:hover{
     color: #ff4d4d;
     border-color: #ff4d4d;
