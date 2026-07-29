@@ -16,3 +16,7 @@ function openNoteDialog() {
     dialog.showModal()
     titleInput.focus()
 };
+
+function closeNoteDialog(){
+    document.getElementById('noteDialog').close()
+}
