@@ -15,4 +15,4 @@ function openNoteDialog() {
 
     dialog.showModal()
     titleInput.focus()
-}
+};
