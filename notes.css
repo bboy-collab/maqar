@@ -78,6 +78,8 @@ input, textarea{
     border: 1px solid #e3e3e3;
     border-radius: 10px;
     padding: 15px 20px;
+    margin: 30px;
+    gap: 20px;
     color: aliceblue;
     cursor: pointer;
     transition: all 0.3s;
