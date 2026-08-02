@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAQAR-Links</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="links.css">
 </head>
 <body>
     <header>
@@ -19,7 +19,52 @@
         </NAv>
         
     </header><br><br><br><br><br><br>
-    
-   <script src="index.js"></script>
+    <h2>Lists</h2>
+    <button id="addListButton">Add List</button>
+    <div class="listsContainer">
+        
+        
+        <div class="linksCard">
+            <div class="listHeader">
+                <h3>title</h3>
+            
+                <div class="listButtons">
+                    <button class="deleteListButton">X</button>
+                    <button class="editListButton">Edit</button>
+                </div>
+            </div>
+            <button class="addLinkButton">Add Link</button>
+            <ul class="linksContainer">
+                
+            </ul>
+
+        </div>
+
+    </div>
+
+    <dialog id="addLinkDialog">
+        <form method="dialog">
+            <label for="linkTitle">Link Title:</label>
+            <input type="text" id="linkTitle" name="linkTitle" required>
+            <label for="linkURL">Link URL:</label>
+            <input type="url" id="linkURL" name="linkURL" required>
+            <menu>
+                <button value="cancel">Cancel</button>
+                <button value="default">Add Link</button>
+            </menu>
+        </form>
+    </dialog>
+
+    <dialog id="addGroupDialog">
+        <form method="dialog">
+            <label for="groupTitle">Group Title:</label>
+            <input type="text" id="groupTitle" name="groupTitle" required>
+            <menu>
+                <button value="cancel">Cancel</button>
+                <button value="default">Add Group</button>
+            </menu>
+        </form>
+    </dialog>
+   <script src="links.js"></script>
 </body>
 </html>

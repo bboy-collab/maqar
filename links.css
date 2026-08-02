@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+    color: aliceblue;
+}
+
+ body{
+    background-color: #171717;
+    font-family: "Playfair Display", serif;
+    
+}
+header h1{
+    color:aliceblue
+}
+
+nav ul{
+    list-style: none;
+    gap: 20px;
+    display: flex;
+}
+nav a{
+    text-decoration: none;
+    color: aliceblue;
+}
+nav a:hover{
+    color: grey;
+}
+nav a.active{
+    border-bottom: 2px solid white;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+nav{
+    position: static;
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+h2{
+    color: aliceblue;
+    text-align: center;
+}
+.groupContainer{
+    color: aliceblue;
+    margin: 20px;
+}
+.linksCard{
+    width: min(320px,100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #1f1f1f;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 10px;
+    border: 1px solid #ded7e0;
+}
+button{
+    background-color: #1f1f1f;
+    color: aliceblue;
+    border: 1px solid #ded7e0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
