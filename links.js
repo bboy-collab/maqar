@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderAllLists();
   setupEventListeners();
   
-});
+}); 
 
 
 function loadFromStorage() {
