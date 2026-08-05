@@ -1,82 +1,426 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Playfair Display", serif;
-    color: aliceblue;  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
- body{
-    background-color: #171717;
-    font-family: "Playfair Display", serif;
-    
-}
-header h1{
-    color:aliceblue
+:root {
+  --bg-primary: #0d0d0d;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #242424;
+  --text-primary: aliceblue;
+  --text-muted: aliceblue;
+  --border-color: #3a3a3a;
+  --accent: aliceblue;
+  --accent-hover: aliceblue;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-nav ul{
-    list-style: none;
-    gap: 20px;
-    display: flex;
+body {
+  background-color: var(--bg-primary);
+  font-family: "Playfair Display", serif;
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
 }
-nav a{
-    text-decoration: none;
-    color: aliceblue;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px 40px;
+  border-bottom: 2px solid var(--border-color);
+  gap: 40px;
+  background-color: var(--bg-secondary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
-nav a:hover{
-    color: grey;
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent);
+  text-transform: uppercase;
 }
-nav a.active{
-    border-bottom: 2px solid white;
+
+nav {
+  position: static;
 }
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  transition: var(--transition);
+  text-transform: uppercase;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a.active {
+  color: var(--accent);
+}
+
+nav a.active::after {
+  width: 100%;
+}
+
+h2 {
+  color: var(--text-primary);
+  text-align: center;
+  font-size: 2rem;
+  margin: 50px 0 40px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+button {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1.5px solid var(--border-color);
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Playfair Display", serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background-color: rgba(232, 180, 212, 0.05);
+  box-shadow: 0 0 15px rgba(232, 180, 212, 0.1);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 20px rgba(232, 180, 212, 0.2);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+#addListButton {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 32px;
+  background-color: var(--bg-tertiary);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+#addListButton:hover {
+  background-color: rgba(232, 180, 212, 0.1);
+  box-shadow: 0 0 20px rgba(232, 180, 212, 0.15);
+}
+
+.listsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 20px 40px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .listsContainer {
+    grid-template-columns: 1fr;
     padding: 20px;
-}
+  }
 
-nav{
-    position: static;
-}
-
-nav ul{
-    display: flex;
-    flex-wrap: wrap;
+  header {
+    padding: 20px;
     gap: 20px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
 }
-h2{
-    color: aliceblue;
-    text-align: center;
+
+.linksCard {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: var(--transition);
+  height: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-.groupContainer{
-    color: aliceblue;
-    margin: 20px;
+
+.linksCard:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 25px rgba(232, 180, 212, 0.1);
+  transform: translateY(-4px);
 }
-.linksCard{
-    width: min(320px,100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.listHeader h3 {
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  flex: 1;
+  word-break: break-word;
+}
+
+.listButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.deleteListButton,
+.editListButton {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  background-color: transparent;
+}
+
+.deleteListButton {
+  border-color: #d97373;
+}
+
+.deleteListButton:hover {
+  color: #ff6b6b;
+  border-color: aliceblue;
+  background-color: rgba(255, 107, 107, 0.05);
+  box-shadow: 0 0 10px rgba(255, 107, 107, 0.1);
+}
+
+.editListButton {
+  border-color: var(--border-color);
+}
+
+.editListButton:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background-color: rgba(232, 180, 212, 0.05);
+}
+
+.addLinkButton {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--bg-tertiary);
+  border: 1.5px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.addLinkButton:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background-color: rgba(232, 180, 212, 0.05);
+}
+
+.linksContainer {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.linksContainer li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background-color: var(--bg-tertiary);
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.linksContainer li:hover {
+  border-color: var(--accent);
+  background-color: rgba(232, 180, 212, 0.03);
+}
+
+.linksContainer a {
+  text-decoration: none;
+  color: var(--text-primary);
+  flex: 1;
+  word-break: break-word;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.linksContainer a:hover {
+  color: var(--accent);
+}
+
+.deleteLinkButton {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  padding: 0 5px;
+  cursor: pointer;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.deleteLinkButton:hover {
+  color: #ff6b6b;
+  transform: scale(1.2);
+}
+
+dialog {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 30px;
+  color: var(--text-primary);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  justify-self: center;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+dialog label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+}
+
+dialog input {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 12px;
+  color: var(--text-primary);
+  font-family: "Playfair Display", serif;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+dialog input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 15px rgba(232, 180, 212, 0.2);
+  background-color: rgba(232, 180, 212, 0.02);
+}
+
+dialog menu {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+}
+
+dialog menu button {
+  padding: 10px 20px;
+}
+
+dialog menu button[value="default"] {
+  background-color: var(--bg-tertiary);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+dialog menu button[value="default"]:hover {
+  background-color: rgba(232, 180, 212, 0.1);
+}
+
+dialog menu button[value="cancel"] {
+  color: var(--text-muted);
+}
+
+.groupContainer {
+  color: var(--text-primary);
+  margin: 20px;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.3rem;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin: 30px 0 20px;
+  }
+
+  .linksCard {
+    padding: 18px;
+  }
+
+  .listHeader h3 {
+    font-size: 1.1rem;
+  }
+
+  nav ul {
     justify-content: center;
-    gap: 10px;
-    background-color: #1f1f1f;
-    padding: 20px;
-    margin: 30px;
-    border-radius: 10px;
-    border: 1px solid #ded7e0;
-}
-button{
-    background-color: #1f1f1f;
-    color: aliceblue;
-    border: 1px solid #ded7e0;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-a{
-    text-decoration: none;
-    color: aliceblue;
+    width: 100%;
+  }
 }

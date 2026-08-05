@@ -13,20 +13,54 @@ header h1{
     color:aliceblue
 }
 
-nav ul{
-    list-style: none;
-    gap: 20px;
-    display: flex;
+nav {
+  position: static;
 }
-nav a{
-    text-decoration: none;
-    color: aliceblue;
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
 }
-nav a:hover{
-    color: grey;
+
+nav a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  transition: 0.3s;
+  text-transform: uppercase;
 }
-nav a.active{
-    border-bottom: 2px solid white;
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: aliceblue;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: aliceblue;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a.active {
+  color: aliceblue;
+}
+
+nav a.active::after {
+  width: 100%;
 }
 header{
     display: flex;
@@ -36,15 +70,6 @@ header{
     padding: 20px;
 }
 
-nav{
-    position: static;
-}
-
-nav ul{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
 h1{
     color: aliceblue;
     text-align: center;
