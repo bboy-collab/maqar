@@ -3,14 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Playfair Display", serif;
+    color:aliceblue;
+    
 }
  body{
     background-color: #171717;
     font-family: "Playfair Display", serif;
     
-}
-header h1{
-    color:aliceblue
 }
 
 nav {
@@ -71,93 +70,38 @@ header{
     padding: 20px;
 }
 
-#cards{
+#cardsContainer{
     display: flex;
     gap: 100px;
     flex-wrap: wrap;
     justify-content: center;
     font-family: serif;
-}
-#cards #card1{
-    width: 200px;
-    height: 200px;
-    background-color: #1f1f1f;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border: 1px solid #9e4fb7;
-    transition:all 0.5s;
-}
-#cards #card1:hover{
-    border: 1px solid #9e4fb7;
-    box-shadow: 0px 0px 20px #9e4fb7;
-}
-#cards #card2{
-    width: 200px;
-    height: 200px;
-    background-color: #1f1f1f;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border: 1px solid #45b841;
-    transition:all 0.5s;
-}
-#cards #card2:hover{
-    border: 1px solid #45b841;
-    box-shadow: 0px 0px 20px #45b841;
-}
-#cards #card3{
-    width: 200px;
-    height: 200px;
-    background-color: #1f1f1f;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border: 1px solid #4663ba;
-    transition:all 0.5s;
-}
-#cards #card3:hover{
-    border: 1px solid #4663ba;
-    box-shadow: 0px 0px 20px #4663ba;
+    align-items: center;
     
 }
+#cards{
+    width: 200px;
+    height: 200px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid aliceblue;
+    transition:all 0.5s;
+}
+#cards:hover{
+    border: 1px solid aliceblue;
+    box-shadow: 0px 0px 20px aliceblue;
+    scale: 1.2;
+}
 
-#card1Header{
-    color: rgb(137, 149, 183);
+#cardHeader{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     padding: 10px;
 } 
-#card2Header{
-    color: rgb(137, 149, 183);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 10px;
-} 
-#card3Header{
-    color: rgb(137, 149, 183);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 10px;
-}
-#card1Header:hover{
-        color: rgb(230, 244, 255);
-    cursor: pointer;
-} 
-#card2Header:hover{
-        color: rgb(230, 244, 255);
-    cursor: pointer;
-} 
-#card3Header:hover{
-    color: rgb(230, 244, 255);
-    cursor: pointer;
-}
+
 footer{
     color:    rgb(195, 195, 195);
     text-align: center;
