@@ -68,6 +68,7 @@ header{
     align-items: center;
     flex-wrap: wrap;
     padding: 20px;
+    border-bottom: 1px solid aliceblue;
 }
 
 h1{
@@ -255,3 +256,22 @@ dialog {
     padding: 20px;
 }
 
+@media (max-width: 768px) {
+  .listsContainer {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  header {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+}

@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  color: aliceblue;
 }
 
 :root {
@@ -24,27 +26,16 @@ body {
   min-height: 100vh;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 30px 40px;
-  border-bottom: 2px solid var(--border-color);
-  gap: 40px;
-  background-color: var(--bg-secondary);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-bottom: 1px solid aliceblue;
 }
 
-header h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: var(--accent);
-  text-transform: uppercase;
-}
+
 
 nav {
   position: static;
